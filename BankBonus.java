@@ -6,8 +6,7 @@
  * Date: Nov 19, 2018
  */
 
-import cst8132.sarray.GenericArray;
-
+import java.util.ArrayList;
 import java.util.Formatter;
 import java.util.NoSuchElementException;
 import java.util.Scanner;
@@ -26,11 +25,11 @@ import java.nio.file.Paths;
  * @version 1.1
  * @since 1.8
  */
-public class Bank {
+public class BankBonus {
 
 	private String bankName;
 
-	private GenericArray<Account> accounts;
+	private ArrayList<Account> accounts;
 
 	// Scanner to receive input for bankName.
 	private static Scanner input;
@@ -43,14 +42,14 @@ public class Bank {
 	 * Default constructor to initialize and store four account instances, two
 	 * chequing and two savings.
 	 */
-	public Bank() {
+	public BankBonus() {
 
 		input = new Scanner(System.in);
 
 		System.out.print("What is the name of this bank? ");
 		bankName = input.next();
 
-		accounts = new GenericArray<>();
+		accounts = new ArrayList<>();
 
 		Client client = new Client("Adam", "Mohr", 4132962, "adam@gmail.com");
 
@@ -194,7 +193,7 @@ public class Bank {
 	 */
 	public static void main(String[] args) {
 
-		Bank myBank = new Bank();
+		BankBonus myBank = new BankBonus();
 
 		boolean quitProgram = false;
 

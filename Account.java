@@ -18,9 +18,9 @@ import java.util.Random;
  */
 public abstract class Account {
 
-	long accountNum;
-	Client client;
-	double balance;
+	protected long accountNum;
+	protected Client client;
+	protected double balance;
 
 	/**
 	 * Parameterized constructor to initialize Account. Generates random accountNum.
